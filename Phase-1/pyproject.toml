@@ -1,0 +1,10 @@
+[project]
+name = "todo-app"
+version = "1.0.0"
+description = "In-memory console Todo application - Phase 1 of Panaversity Hackathon II"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+todo = "main:main"
