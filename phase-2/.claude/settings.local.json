@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(taskkill:*)",
+      "Bash(ls \"C:\\\\Users\\\\Administrator\\\\Desktop\\\\Hackathon-2\\\\phase-2\\\\frontend\"\" | Select-String \"env \")",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(.venv/Scripts/python.exe -m uvicorn:*)",
+      "Bash(curl:*)",
+      "Bash(source:*)",
+      "Bash(python:*)",
+      "Bash(uvicorn:*)",
+      "Bash(npm run dev)",
+      "Bash(PORT=3001 npm run dev:*)",
+      "Bash(netstat:*)",
+      "Bash(git config:*)"
+    ]
+  }
+}
