@@ -33,12 +33,13 @@ export default function LoginPage() {
 
   const onSubmit = async (data: LoginFormData) => {
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
-      const response = await fetch(`${apiUrl}/api/auth/sign-in`, {
+      // Use Better Auth on frontend (not backend API)
+      const response = await fetch('/api/auth/sign-in', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        credentials: 'include', // Include cookies
         body: JSON.stringify({
           email: data.email,
           password: data.password,
@@ -47,14 +48,10 @@ export default function LoginPage() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.detail || 'Login failed');
+        throw new Error(errorData.error || 'Login failed');
       }
 
       const responseData = await response.json();
-
-      // Store JWT token in localStorage
-      localStorage.setItem('auth_token', responseData.token);
-      localStorage.setItem('user', JSON.stringify(responseData.user));
 
       toast.success('Welcome back!');
       router.push('/tasks');
