@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Alembic (migrations already run)
+alembic.ini
+alembic/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation (not needed in container)
+README.md
+README_HF.md
+
+# Local files
+.env
+*.log
+
+# Vercel (not needed for HF)
+.vercel/
+vercel.json
+api/
+
+# UV files
+.python-version
+uv.lock

@@ -13,7 +13,14 @@
       "Bash(npm run dev)",
       "Bash(PORT=3001 npm run dev:*)",
       "Bash(netstat:*)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(git push:*)",
+      "Bash(where:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nFix: Update auth.ts for Vercel deployment\n\n- Fixed import: PostgresJSDialect instead of KyselyPostgresDialect\n- Removed kyselyAdapter \\(not available in better-auth\\)\n- Added vercel.json configuration\n- Added .env.example for deployment reference\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(vercel:*)",
+      "Bash(bash:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
