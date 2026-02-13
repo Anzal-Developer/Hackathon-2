@@ -1,8 +1,9 @@
 """
 Vercel serverless handler for FastAPI application.
-This file is required for Vercel to properly serve the FastAPI app as a serverless function.
+Uses Mangum to adapt FastAPI ASGI app for serverless environment.
 """
+from mangum import Mangum
 from app.main import app
 
-# Vercel expects a handler or the app itself
-handler = app
+# Wrap FastAPI app with Mangum for AWS Lambda/Vercel compatibility
+handler = Mangum(app, lifespan="off")
